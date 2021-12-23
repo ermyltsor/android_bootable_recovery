@@ -284,10 +284,11 @@ int DataManager::SaveValues()
 	if (mBackingFile.empty())
 		return -1;
 
-	string mount_path = GetSettingsStoragePath();
-	PartitionManager.Mount_By_Path(mount_path.c_str(), 1);
+	//string mount_path = GetSettingsStoragePath();
+	//PartitionManager.Mount_By_Path(mount_path.c_str(), 1);
 
-	mPersist.SetFile(mBackingFile);
+	//mPersist.SetFile(mBackingFile);
+	mPersist.SetFile(string(TW_PERSIST_DIR) + "/" + TW_SETTINGS_FILE);
 	mPersist.SetFileVersion(FILE_VERSION);
 	pthread_mutex_lock(&m_valuesLock);
 	mPersist.SaveValues();
@@ -1135,17 +1136,20 @@ void DataManager::ReadSettingsFile(void)
 {
 #ifndef TW_OEM_BUILD
 	// Load up the values for TWRP - Sleep to let the card be ready
-	char mkdir_path[255], settings_file[255];
+	//char mkdir_path[255], settings_file[255];
+	char settings_file[255];
 	int is_enc, has_data_media;
 
 	GetValue(TW_IS_ENCRYPTED, is_enc);
 	GetValue(TW_HAS_DATA_MEDIA, has_data_media);
 
-	memset(mkdir_path, 0, sizeof(mkdir_path));
+	//memset(mkdir_path, 0, sizeof(mkdir_path));
 	memset(settings_file, 0, sizeof(settings_file));
-	sprintf(mkdir_path, "%s%s", GetSettingsStoragePath().c_str(), GetStrValue(TW_RECOVERY_FOLDER_VAR).c_str());
-	sprintf(settings_file, "%s/%s", mkdir_path, TW_SETTINGS_FILE);
+	//sprintf(mkdir_path, "%s%s", GetSettingsStoragePath().c_str(), GetStrValue(TW_RECOVERY_FOLDER_VAR).c_str());
+	//sprintf(settings_file, "%s/%s", mkdir_path, TW_SETTINGS_FILE);
+	sprintf(settings_file, "%s/%s", TW_PERSIST_DIR, TW_SETTINGS_FILE);
 
+	/*
 	if (!PartitionManager.Mount_Settings_Storage(false))
 	{
 		usleep(500000);
@@ -1154,6 +1158,7 @@ void DataManager::ReadSettingsFile(void)
 	}
 
 	mkdir(mkdir_path, 0777);
+	*/
 
 	LOGINFO("Attempt to load settings from settings file...\n");
 	LoadValues(settings_file);
@@ -1190,5 +1195,5 @@ void DataManager::LoadTWRPFolderInfo(void)
 {
 	string mainPath = GetCurrentStoragePath();
 	SetValue(TW_RECOVERY_FOLDER_VAR, TWFunc::Check_For_TwrpFolder());
-	mBackingFile = mainPath + GetStrValue(TW_RECOVERY_FOLDER_VAR) + '/' + TW_SETTINGS_FILE;
+	mBackingFile = string(TW_PERSIST_DIR) + '/' + TW_SETTINGS_FILE;
 }
