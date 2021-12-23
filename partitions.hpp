@@ -447,6 +447,7 @@ public:
 	void Check_UsbOtg_Status();						  // Checks if usb_otg is connected
 	std::pair<string, string> Get_Partition_Checksums(TWPartition* twrpPart); // Generates and returns the SHA-256 checksum for the specified partition
 	bool Mount_Super_Toggle(const string& arg, bool user_toggle = false);	  // Changes Mount_Read_Only flag for all dynamic partitions
+	bool Prevent_Install_Stock_Rec(bool Display_Info);                        // Prevent automatic installation of stock Recovery
 
 #ifdef TW_HAS_MTP
 	bool is_MTP_Enabled(void);						  // returns whether MTP is already enabled

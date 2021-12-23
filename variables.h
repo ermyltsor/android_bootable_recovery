@@ -235,6 +235,8 @@ static int Fox_Current_ROM_IsMIUI = 0; // is the currently installed ROM a MIUI 
 #define TW_TIME_ZONE_VAR            "tw_time_zone"
 #define TW_RM_RF_VAR                "tw_rm_rf"
 
+#define TW_PREVENT_AUTO_INSTALL_STOCK_REC_VAR     "tw_prevent_auto_install_stock_rec"
+
 #define TW_BACKUPS_FOLDER_VAR       "tw_backups_folder"
 #define TW_AUTO_DISABLE_AVB2_VAR    "tw_auto_disable_avb2"
 #define OF_AUTO_DISABLE_VBMETA_AVB2_VAR  "fox_auto_disable_vbmeta_avb2"

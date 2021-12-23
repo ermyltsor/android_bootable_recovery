@@ -244,6 +244,10 @@
 
 			<listbox style="settingslist_group">
 				<placement x="0" y="%row2_2_y%" w="%screen_w%" h="%lb_group_l10%"/>
+				<listitem name="{@prevent_auto_install_stock_rec}">
+					<condition var1="tw_has_boot_slots" var2="0"/>
+					<data variable="tw_prevent_auto_install_stock_rec"/>
+				</listitem>
 				<listitem name="{@mount_sys_ro_chk}">
 					<icon res="checkbox_true"/>
 					<condition var1="tw_mount_system_ro" op="!=" var2="0"/>

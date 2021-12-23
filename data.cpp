@@ -1218,6 +1218,7 @@ void DataManager::SetDefaultValues()
 #else
   mPersist.SetValue("lock_btn", "0");
 #endif
+	mPersist.SetValue(TW_PREVENT_AUTO_INSTALL_STOCK_REC_VAR, "1");
 
   mConst.SetValue(FOX_SURVIVAL_FOLDER_VAR, FOX_SURVIVAL_FOLDER);
   mConst.SetValue(FOX_SURVIVAL_BACKUP_NAME, FOX_SURVIVAL_BACKUP);
