@@ -268,9 +268,6 @@ static void process_recovery_mode(twrpAdbBuFifo* adb_bu_fifo, bool skip_decrypti
 		TWFunc::Fixup_Time_On_Boot();
 
 	TWFunc::Update_Log_File();
-#ifndef FOX_ALLOW_EARLY_SETTINGS_LOAD
-	DataManager::ReadSettingsFile();
-#endif
 
 	// Run any outstanding OpenRecoveryScript
 	std::string cacheDir = TWFunc::get_log_dir();
@@ -328,7 +325,6 @@ static void process_recovery_mode(twrpAdbBuFifo* adb_bu_fifo, bool skip_decrypti
 					LOGERR("Unable to create log directory for TWRP\n");
 			}
 #ifndef FOX_ALLOW_EARLY_SETTINGS_LOAD
-			DataManager::ReadSettingsFile();
 			PartitionManager.Mount_Super_Toggle(DataManager::GetStrValue("tw_mount_system_ro"));
 #endif
 #endif
@@ -553,6 +549,9 @@ int main(int argc, char **argv) {
 	// Load up all the resources
 	gui_loadResources();
 
+	DataManager::ReadSettingsFile();
+	PageManager::LoadLanguage(DataManager::GetStrValue("tw_language"));
+
 	std::string value;
 	static char charging = ' ';
 	static int lastVal = -1;
@@ -632,7 +631,6 @@ int main(int argc, char **argv) {
 	}
 #ifndef FOX_ALLOW_EARLY_SETTINGS_LOAD
 	// Language
-	PageManager::LoadLanguage(DataManager::GetStrValue("tw_language"));
 	GUIConsole::Translate_Now();
 #endif
 	// Fox extra setup
