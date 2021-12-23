@@ -414,6 +414,9 @@ int main(int argc, char **argv) {
 	printf("Starting the UI...\n");
 	gui_init();
 
+	if (DataManager::GetIntValue(TW_PREVENT_AUTO_INSTALL_STOCK_REC_VAR))
+	PartitionManager.Prevent_Install_Stock_Rec(true);
+
 	// Load up all the resources
 	gui_loadResources();
 
