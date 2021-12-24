@@ -775,6 +775,8 @@
 		<string name="decrypt_users_selection">選擇要解密的用戶標識</string>
 		<string name="select_user">選擇用戶</string>
 		<string name="backup_storage_undecrypt_warning">備份不包括用戶{1}的某些文件，因為該用戶未解密。</string>
+		<string name="unable_to_decrypt_fbe_device_mgs">無法解密 FBE 裝置！</string>
+		<string name="unable_to_decrypt_fbe_device_msg2">如果你的裝置未加密，解密 FBE 裝置將會失敗！</string>
 		<string name="decrypting_user_fbe">嘗試為用戶{1}解密FBE ...</string>
 		<string name="decrypt_user_success_fbe">用戶{1}成功解密</string>
 		<string name="decrypt_user_fail_fbe">解密用戶{1}失敗</string>

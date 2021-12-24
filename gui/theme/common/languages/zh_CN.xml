@@ -530,6 +530,9 @@
 		<string name="fixing_recovery_loop_patch">正在对内核打补丁…</string>
 		<string name="fix_recovery_loop_patch_error">对内核打补丁时出错。</string>
 
+		<string name="unable_to_decrypt_fbe_device_mgs">无法解密 FBE 设备！</string>
+		<string name="unable_to_decrypt_fbe_device_msg2">如果你的设备未加密，解密 FBE 设备会失败！</string>
+
 		<!-- Various console messages - these consist of user displayed messages, oftentimes errors -->
 		<string name="no_kernel_selinux">内核不支持读取 SELinux Context。</string>
 		<string name="full_selinux">完整 SELinux 支持。</string>
