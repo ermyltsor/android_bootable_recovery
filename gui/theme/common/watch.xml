@@ -3808,6 +3808,9 @@
 					<condition var1="tw_has_boot_slots" var2="0"/>
 					<data variable="tw_prevent_auto_install_stock_rec"/>
 				</listitem>
+				<listitem name="{@auto_disable_avb2=Automatically disable AVB2.0}">
+					<data variable="tw_auto_disable_avb2"/>
+				</listitem>
 				<listitem name="{@zip_sig_chk=Zip signature verification}">
 					<data variable="tw_signed_zip_verify"/>
 				</listitem>
@@ -4360,6 +4363,17 @@
 				<listitem name="{@change_twrp_folder_btn=Change TWRP folder}">
 					<condition var1="tw_is_decrypted" var2="1"/>
 					<action function="page">changeTwrpFolder</action>
+				</listitem>
+				<listitem name="{@disable_avb2=Disable AVB2.0}">
+					<actions>
+						<action function="set">tw_back=advanced</action>
+						<action function="set">tw_action=disableAVB2</action>
+						<action function="set">tw_text1={@disable_avb2_confirm=Disable AVB2.0?}</action>
+						<action function="set">tw_action_text1={@disabling_AVB2=Disabling AVB2.0...}</action>
+						<action function="set">tw_complete_text1={@disabling_AVB2_complete=Disabled AVB2.0}</action>
+						<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+						<action function="page">confirm_action</action>
+					</actions>
 				</listitem>
 				<listitem name="{@decrypt_users=Decrypt Users}">
 					<conditions>
