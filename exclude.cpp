@@ -82,8 +82,10 @@ uint64_t TWExclude::Get_Folder_Size(const string& Path) {
 			   i++;
 
 			if (i < 4) {
-			   gui_msg(Msg(msg::kError, "error_opening_strerr=Error opening: '{1}' ({2})")(FullPath)(strerror(errno)));
-			   LOGINFO("Real error: Unable to stat '%s'\n", FullPath.c_str());
+			   if (errno != ENAMETOOLONG) {
+					gui_msg(Msg(msg::kError, "error_opening_strerr=Error opening: '{1}' ({2})")(FullPath)(strerror(errno)));
+					LOGINFO("Real error: Unable to stat '%s'\n", FullPath.c_str());
+				}
 			}
 
 			if (i == 7) // ok, the errors continue - so, inform the user
