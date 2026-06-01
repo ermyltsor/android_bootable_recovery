@@ -612,7 +612,7 @@
 
 			<fileselector>
 				<placement x="%indent%" y="%row1a_y%" w="%content_width%" h="%fileselector_install_height%"/>
-				<filter extn=".zip,.ozip,.ZIP,.OZIP,.img,.IMG" folders="1" files="1"/>
+				<filter extn=".zip,.ozip,.ZIP,.OZIP,.img,.IMG,.bin,.BIN,.mbn,.elf" folders="1" files="1"/>
 				<prfxfilter prfx="Magisk-;Magisk.apk;MagiskAlpha.apk;MagiskDelta.apk;app-release.apk;app-debug.apk" folders="1" files="1"/>
 				<path name="tw_zip_location" default="/sdcard"/>
 				<data name="tw_filename"/>
@@ -669,6 +669,50 @@
 			<action>
 				<conditions>
 					<condition var1="pb_file_extn" var2="img"/>
+					<condition var1="tw_filename" op="modified"/>
+				</conditions>
+				<actions>
+					<action function="set">tw_is_slot_part=0</action>
+					<action function="page">flashimage_confirm</action>
+				</actions>
+			</action>
+
+			<action>
+				<conditions>
+					<condition var1="pb_file_extn" var2="bin"/>
+					<condition var1="tw_filename" op="modified"/>
+				</conditions>
+				<actions>
+					<action function="set">tw_is_slot_part=0</action>
+					<action function="page">flashimage_confirm</action>
+				</actions>
+			</action>
+
+			<action>
+				<conditions>
+					<condition var1="pb_file_extn" var2="BIN"/>
+					<condition var1="tw_filename" op="modified"/>
+				</conditions>
+				<actions>
+					<action function="set">tw_is_slot_part=0</action>
+					<action function="page">flashimage_confirm</action>
+				</actions>
+			</action>
+
+			<action>
+				<conditions>
+					<condition var1="pb_file_extn" var2="mbn"/>
+					<condition var1="tw_filename" op="modified"/>
+				</conditions>
+				<actions>
+					<action function="set">tw_is_slot_part=0</action>
+					<action function="page">flashimage_confirm</action>
+				</actions>
+			</action>
+
+			<action>
+				<conditions>
+					<condition var1="pb_file_extn" var2="elf"/>
 					<condition var1="tw_filename" op="modified"/>
 				</conditions>
 				<actions>
