@@ -861,8 +861,6 @@
 		<string name="pb_incremental_ota_res_run">Running OTA_RES process...</string>
 		<string name="pb_incremental_ota_bak_run">Zagon postopka OTA_BAK ...</string>
 		<string name="pb_incremental_ota_bak">OTA_BAK - končano!</string>
-		<string name="pb_advanced_stock_recovery">Agresivna deaktivacija obnovitve zalog</string>
-		<string name="pb_reboot_dont_disable_stock_recovery_chk">Ne onemogočite zamenjave obnovitve zalog</string>
 		<string name="pb_dmverity_chk">Deaktivacija (Patch DM-Verity)</string>
 		<string name="pb_for_en_chk">Vnaprej onemogoči prisilno šifriranje</string>
 		<string name="pb_forced_encryption_chk">Onemogoči prisilno šifriranje</string>

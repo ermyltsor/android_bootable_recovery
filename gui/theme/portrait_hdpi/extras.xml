@@ -321,13 +321,6 @@
 				<listitem name="{@pb_support_miui_ota_chk=Support MIUI Incremental OTA}">
 					<data variable="pb_support_miui_ota"/>
 				</listitem>
-				<listitem name="{@pb_advanced_stock_recovery=Simulate failure for actions}">
-					<data variable="pb_reboot_advanced_stock_recovery_check"/>
-				</listitem>
-				<listitem name="{@pb_reboot_dont_disable_stock_recovery_chk=}">
-					<condition var1="tw_mount_system_ro" op="!=" var2="0"/>
-					<data variable="pb_reboot_dont_disable_stock_recovery"/>
-				</listitem>
 				<listitem name="{@pb_disable_reboot_ota_check=Disable Rebooting After OTA}">
 					<data variable="pb_disable_reboot_ota"/>
 				</listitem>

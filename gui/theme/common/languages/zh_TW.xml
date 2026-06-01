@@ -899,8 +899,6 @@
 		<string name="pb_incremental_ota_res_run">正在運行OTA_RES進程...</string>
 		<string name="pb_incremental_ota_bak_run">正在運行OTA_BAK進程...</string>
 		<string name="pb_incremental_ota_bak">OTA_BAK-完成！</string>
-		<string name="pb_advanced_stock_recovery">積極的庫存回收停用</string>
-		<string name="pb_reboot_dont_disable_stock_recovery_chk">不要禁用庫存恢復替換</string>
 		<string name="pb_dmverity_chk">停用（補丁DM版本）</string>
 		<string name="pb_for_en_chk">提前禁用強制加密</string>
 		<string name="pb_forced_encryption_chk">禁用強制加密</string>

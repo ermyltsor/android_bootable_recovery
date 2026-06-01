@@ -875,8 +875,6 @@
 		<string name="pb_incremental_ota_res_run">Executando processo OTA_RES ...</string>
 		<string name="pb_incremental_ota_bak_run">Executando processo OTA_BAK ...</string>
 		<string name="pb_incremental_ota_bak">OTA_BAK - pronto!</string>
-		<string name="pb_advanced_stock_recovery">Desativação de recuperação agressiva de estoque</string>
-		<string name="pb_reboot_dont_disable_stock_recovery_chk">Não desative a substituição de recuperação de estoque</string>
 		<string name="pb_dmverity_chk">Desativação (Patch DM-Verity)</string>
 		<string name="pb_for_en_chk">Desativar antecipadamente criptografia forçada</string>
 		<string name="pb_forced_encryption_chk">Desativar criptografia forçada</string>

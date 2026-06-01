@@ -887,8 +887,6 @@
 		<string name="pb_incremental_ota_res_run">Az OTA_RES folyamat futtatása ...</string>
 		<string name="pb_incremental_ota_bak_run">Az OTA_BAK folyamat futtatása ...</string>
 		<string name="pb_incremental_ota_bak">OTA_BAK - kész!</string>
-		<string name="pb_advanced_stock_recovery">Agresszív készlet helyreállítási deaktiválás</string>
-		<string name="pb_reboot_dont_disable_stock_recovery_chk">Ne tiltsa le a készlet helyreállítását</string>
 		<string name="pb_dmverity_chk">Deaktiválás (Patch DM-Verity)</string>
 		<string name="pb_for_en_chk">Előzetes tiltás kényszerítésre</string>
 		<string name="pb_forced_encryption_chk">Letiltja a kényszer titkosítást</string>

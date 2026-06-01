@@ -861,8 +861,6 @@
 		<string name="pb_incremental_ota_res_run">Spúšťa sa proces OTA_RES ...</string>
 		<string name="pb_incremental_ota_bak_run">Spúšťa sa proces OTA_BAK ...</string>
 		<string name="pb_incremental_ota_bak">OTA_BAK - hotovo!</string>
-		<string name="pb_advanced_stock_recovery">Agresívna deaktivácia obnovenia zásob</string>
-		<string name="pb_reboot_dont_disable_stock_recovery_chk">Nezakazujte obnovu zásob</string>
 		<string name="pb_dmverity_chk">Deaktivácia (Patch DM-Verity)</string>
 		<string name="pb_for_en_chk">Advance Disable Forced Encryption</string>
 		<string name="pb_forced_encryption_chk">Zakázať nútené šifrovanie</string>

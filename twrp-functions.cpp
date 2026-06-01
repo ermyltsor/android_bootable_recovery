@@ -1254,40 +1254,6 @@ std::string TWFunc::to_string(unsigned long value) {
 	return os.str();
 }
 
-void TWFunc::Disable_Stock_Recovery_Replace(void) {
-	PartitionManager.Mount_By_Path("/vendor", false);
-	PartitionManager.Mount_By_Path(PartitionManager.Get_Android_Root_Path(), false);
-		// Disable flashing of stock recovery
-		if (DataManager::GetIntValue(PB_ADVANCED_STOCK_REPLACE) == 1) {
-			  if (Path_Exists("/system/bin/install-recovery.sh"))
-				     rename("/system/bin/install-recovery.sh", "/system/bin/wlfx0install-recoverybak0xwlf");    
-			if (Path_Exists("/system/etc/install-recovery.sh"))
-				  rename("/system/etc/install-recovery.sh", "/system/etc/wlfx0install-recoverybak0xwlf");
-			if (Path_Exists("/system/etc/recovery-resource.dat"))
-				    rename("/system/etc/recovery-resource.dat", "/system/etc/wlfx0recovery-resource0xwlf");
-			  if (Path_Exists("/system/vendor/bin/install-recovery.sh")) 
-				     rename("/system/vendor/bin/install-recovery.sh", "/system/vendor/bin/wlfx0install-recoverybak0xwlf");    
-			if (Path_Exists("/system/vendor/etc/install-recovery.sh"))
-				  rename("/system/vendor/etc/install-recovery.sh", "/system/vendor/etc/wlfx0install-recoverybak0xwlf");
-			if (Path_Exists("/system/vendor/etc/recovery-resource.dat"))
-				    rename("/system/vendor/etc/recovery-resource.dat", "/system/vendor/etc/wlfx0recovery-resource0xwlf");
-			  if (Path_Exists("/vendor/bin/install-recovery.sh")) 
-				     rename("/vendor/bin/install-recovery.sh", "/vendor/bin/wlfx0install-recoverybak0xwlf");    
-			if (Path_Exists("/vendor/etc/install-recovery.sh"))
-				  rename("/vendor/etc/install-recovery.sh", "/vendor/etc/wlfx0install-recoverybak0xwlf");
-			if (Path_Exists("/vendor/etc/recovery-resource.dat"))
-				    rename("/vendor/etc/recovery-resource.dat", "/vendor/etc/wlfx0recovery-resource0xwlf");
-			if (TWFunc::Path_Exists("/system/recovery-from-boot.p")) {
-				rename("/system/recovery-from-boot.p", "/system/wlfx0recovery-from-bootbak0xwlf");
-		        	sync();
-			}		
-		}
-		if (PartitionManager.Is_Mounted_By_Path(PartitionManager.Get_Android_Root_Path()))
-			PartitionManager.UnMount_By_Path(PartitionManager.Get_Android_Root_Path(), false);
-		if (PartitionManager.Is_Mounted_By_Path("/vendor"))
-			PartitionManager.UnMount_By_Path("/vendor", false);
-}
-
 unsigned long long TWFunc::IOCTL_Get_Block_Size(const char* block_device) {
 	unsigned long block_device_size;
 	int ret = 0;
