@@ -494,6 +494,66 @@ bool TWPartition::Process_Fstab_Line(const char *fstab_line, bool Display_Error,
 			Backup_Display_Name = Display_Name;
 			Storage_Name = Display_Name;
 			Can_Be_Backed_Up = Wipe_Available_in_GUI = Is_Super ? false : true;
+		} else if (Mount_Point == "/my_product") {
+			Display_Name = "My_Product";
+			Backup_Name = "My_Product";
+			Backup_Display_Name = Display_Name;
+			Storage_Name = Display_Name;
+			Can_Be_Backed_Up = Wipe_Available_in_GUI = Is_Super ? false : true;
+		} else if (Mount_Point == "/my_engineering") {
+			Display_Name = "My_Engineering";
+			Backup_Name = "My_Engineering";
+			Backup_Display_Name = Display_Name;
+			Storage_Name = Display_Name;
+			Can_Be_Backed_Up = Wipe_Available_in_GUI = Is_Super ? false : true;
+		} else if (Mount_Point == "/my_company") {
+			Display_Name = "My_Company";
+			Backup_Name = "My_Company";
+			Backup_Display_Name = Display_Name;
+			Storage_Name = Display_Name;
+			Can_Be_Backed_Up = Wipe_Available_in_GUI = Is_Super ? false : true;
+		} else if (Mount_Point == "/my_carrier") {
+			Display_Name = "My_Carrier";
+			Backup_Name = "My_Carrier";
+			Backup_Display_Name = Display_Name;
+			Storage_Name = Display_Name;
+			Can_Be_Backed_Up = Wipe_Available_in_GUI = Is_Super ? false : true;
+		} else if (Mount_Point == "/my_region") {
+			Display_Name = "My_Region";
+			Backup_Name = "My_Region";
+			Backup_Display_Name = Display_Name;
+			Storage_Name = Display_Name;
+			Can_Be_Backed_Up = Wipe_Available_in_GUI = Is_Super ? false : true;
+		} else if (Mount_Point == "/my_heytap") {
+			Display_Name = "My_Heytap";
+			Backup_Name = "My_Heytap";
+			Backup_Display_Name = Display_Name;
+			Storage_Name = Display_Name;
+			Can_Be_Backed_Up = Wipe_Available_in_GUI = Is_Super ? false : true;
+		} else if (Mount_Point == "/my_stock") {
+			Display_Name = "My_Stock";
+			Backup_Name = "My_Stock";
+			Backup_Display_Name = Display_Name;
+			Storage_Name = Display_Name;
+			Can_Be_Backed_Up = Wipe_Available_in_GUI = Is_Super ? false : true;
+		} else if (Mount_Point == "/my_preload") {
+			Display_Name = "My_Preload";
+			Backup_Name = "My_Preload";
+			Backup_Display_Name = Display_Name;
+			Storage_Name = Display_Name;
+			Can_Be_Backed_Up = Wipe_Available_in_GUI = Is_Super ? false : true;
+		} else if (Mount_Point == "/my_bigball") {
+			Display_Name = "My_Bigball";
+			Backup_Name = "My_Bigball";
+			Backup_Display_Name = Display_Name;
+			Storage_Name = Display_Name;
+			Can_Be_Backed_Up = Wipe_Available_in_GUI = Is_Super ? false : true;
+		} else if (Mount_Point == "/my_manifest") {
+			Display_Name = "My_Manifest";
+			Backup_Name = "My_Manifest";
+			Backup_Display_Name = Display_Name;
+			Storage_Name = Display_Name;
+			Can_Be_Backed_Up = Wipe_Available_in_GUI = Is_Super ? false : true;
 		} else if (Mount_Point == "/data") {
 			Display_Name = "Data";
 			Backup_Display_Name = Display_Name;
