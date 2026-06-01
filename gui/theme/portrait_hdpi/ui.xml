@@ -294,7 +294,7 @@
 		<variable name="tw_hide_kb" value="0"/>
 		<variable name="screen_width" value="1080"/>
 		<variable name="screen_height" value="1920"/>
-		<variable name="status_height" value="72"/>
+		<variable name="status_height" value="82"/>
 		<variable name="header_height" value="256"/>
 		<variable name="navbar_height" value="130"/>
 		<variable name="content_width" value="1008"/>
@@ -304,7 +304,9 @@
 		<variable name="console_button_x" value="840"/>
 		<variable name="indent" value="45"/>
 		<variable name="indent_button" value="39"/>
-		<variable name="status_bar_time" value="50"/>
+		<variable name="status_bar_time" value="480"/>
+		<variable name="cpu_temp_image" value="138"/>
+		<variable name="status_bar_cpu_temp" value="184"/>
 		<variable name="y_sort" value="776"/>
 		<variable name="indent_tr_console" value="15"/>
 		<variable name="indent_tr_console_r" value="1045"/>
@@ -342,7 +344,7 @@
 		<variable name="btn4_col3_x" value="558"/>
 		<variable name="row_filter_dialog" value="80"/>
 		<variable name="btn4_col4_x" value="819"/>
-		<variable name="row1_header_y" value="12"/>
+		<variable name="row1_header_y" value="38"/>
 		<variable name="row2_header_y" value="72"/>
 		<variable name="upper_header" value="100"/>
 		<variable name="row3_header_y" value="110"/>
@@ -517,13 +519,13 @@
 			</text>
 			<image>
 				<image resource="temp"/>
-				<placement x="%col1_x_header%" y="%row1_header_y%"/>
+				<placement x="%cpu_temp_image%" y="%row1_header_y%"/>
 			</image>
 			<text color="%text_color%">
 				<condition var1="tw_no_cpu_temp" var2="0"/>
 				<condition var1="tw_sd_free" var2="0"/>
 				<font resource="font_m"/>
-				<placement x="%back_button_x%" y="%row1_header_y%"/>
+				<placement x="%status_bar_cpu_temp%" y="%row1_header_y%"/>
 				<text>{@cpu_temp= %tw_cpu_temp% °C}</text>
 			</text>
 			<text color="%text_color%">
@@ -636,13 +638,13 @@
 			</text>
 			<image>
 				<image resource="temp"/>
-				<placement x="%col1_x_header%" y="%row1_header_y%"/>
+				<placement x="%cpu_temp_image%" y="%row1_header_y%"/>
 			</image>
 			<text color="%text_color%">
 				<condition var1="tw_no_cpu_temp" var2="0"/>
 				<condition var1="tw_sd_free" var2="0"/>
 				<font resource="font_m"/>
-				<placement x="%back_button_x%" y="%row1_header_y%"/>
+				<placement x="%status_bar_cpu_temp%" y="%row1_header_y%"/>
 				<text>{@cpu_temp= %tw_cpu_temp% °C}</text>
 			</text>
 			<text color="%text_color%">
@@ -753,13 +755,13 @@
 			</text>
 			<image>
 				<image resource="temp"/>
-				<placement x="%col1_x_header%" y="%row1_header_y%"/>
+				<placement x="%cpu_temp_image%" y="%row1_header_y%"/>
 			</image>
 			<text color="%text_color%">
 				<condition var1="tw_no_cpu_temp" var2="0"/>
 				<condition var1="tw_sd_free" var2="0"/>
 				<font resource="font_m"/>
-				<placement x="%back_button_x%" y="%row1_header_y%"/>
+				<placement x="%status_bar_cpu_temp%" y="%row1_header_y%"/>
 				<text>{@cpu_temp= %tw_cpu_temp% °C}</text>
 			</text>
 			<text color="%text_color%">
@@ -817,13 +819,13 @@
 			</text>
 			<image>
 				<image resource="temp"/>
-				<placement x="%col1_x_header%" y="%row1_header_y%"/>
+				<placement x="%cpu_temp_image%" y="%row1_header_y%"/>
 			</image>
 			<text color="%text_color%">
 				<condition var1="tw_no_cpu_temp" var2="0"/>
 				<condition var1="tw_sd_free" var2="0"/>
 				<font resource="font_m"/>
-				<placement x="%back_button_x%" y="%row1_header_y%"/>
+				<placement x="%status_bar_cpu_temp%" y="%row1_header_y%"/>
 				<text>{@cpu_temp= %tw_cpu_temp% °C}</text>
 			</text>
 			<text color="%text_color%">
@@ -925,13 +927,13 @@
 			</text>
 			<image>
 				<image resource="temp"/>
-				<placement x="%col1_x_header%" y="%row1_header_y%"/>
+				<placement x="%cpu_temp_image%" y="%row1_header_y%"/>
 			</image>
 			<text color="%text_color%">
 				<condition var1="tw_no_cpu_temp" var2="0"/>
 				<condition var1="tw_sd_free" var2="0"/>
 				<font resource="font_m"/>
-				<placement x="%back_button_x%" y="%row1_header_y%"/>
+				<placement x="%status_bar_cpu_temp%" y="%row1_header_y%"/>
 				<text>{@cpu_temp= %tw_cpu_temp% °C}</text>
 			</text>
 			<text color="%text_color%">
@@ -996,13 +998,13 @@
 			</text>
 			<image>
 				<image resource="temp"/>
-				<placement x="%col1_x_header%" y="%row1_header_y%"/>
+				<placement x="%cpu_temp_image%" y="%row1_header_y%"/>
 			</image>
 			<text color="%text_color%">
 				<condition var1="tw_no_cpu_temp" var2="0"/>
 				<condition var1="tw_sd_free" var2="0"/>
 				<font resource="font_m"/>
-				<placement x="%back_button_x%" y="%row1_header_y%"/>
+				<placement x="%status_bar_cpu_temp%" y="%row1_header_y%"/>
 				<text>{@cpu_temp= %tw_cpu_temp% °C}</text>
 			</text>
 			<text color="%text_color%">
