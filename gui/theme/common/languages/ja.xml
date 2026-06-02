@@ -975,7 +975,6 @@
 		<string name="patch_avb2">AVB2.0 Verity にパッチを適用</string>
 		<string name="pb_patch_avb2">AVB2.0 にパッチが適用されました</string>
 		<string name="pb_patch_avb_no">AVB2.0 のパッチ適用は不要です</string>
-		<string name="pb_tools_info">ツールの情報は pbrp.ml/docs/tools で確認できます</string>
 		<string name="pb_coming_soon2">申し訳ありません、この機能は近日公開予定です！</string>
 		<string name="pb_theme_1">自作のカスタムテーマがある場合は、ぜひ</string>
 		<string name="pb_theme_2">公式チャンネルまでお送りください</string>

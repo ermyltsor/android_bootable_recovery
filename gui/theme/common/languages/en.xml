@@ -934,7 +934,7 @@
 		<string name="patch_avb2">Patch AVB2.0 Verity</string>
 		<string name="pb_patch_avb2">Patched AVB2.0</string>
 		<string name="pb_patch_avb_no">AVB2.0 Patching not Required</string>
-		<string name="pb_tools_info">Tools information can be found at pbrp.ml/docs/tools</string>
+		<string name="pb_tools_info">Closed this page for OPPO devices</string>
 		<string name="pb_coming_soon2">We are sorry but it's coming soon!</string>
 		<string name="pb_theme_1">Feel free to send your custom made themes to</string>
 		<string name="pb_theme_2">us on</string>

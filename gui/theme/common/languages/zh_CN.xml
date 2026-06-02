@@ -975,7 +975,7 @@
 		<string name="patch_avb2">修补 AVB2.0 Verity</string>
 		<string name="pb_patch_avb2">已修补 AVB2.0</string>
 		<string name="pb_patch_avb_no">不需要修补 AVB2.0</string>
-		<string name="pb_tools_info">工具信息可在 pbrp.ml/docs/tools 找到</string>
+		<string name="pb_tools_info">为 OPPO 设备关闭该页面</string>
 		<string name="pb_coming_soon2">很抱歉，该功能即将推出！</string>
 		<string name="pb_theme_1">欢迎将您自定义的主题发送给</string>
 		<string name="pb_theme_2">我们的官方渠道</string>

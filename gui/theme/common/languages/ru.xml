@@ -934,7 +934,6 @@
 		<string name="patch_avb2">Патчить AVB2.0 Verity</string>
 		<string name="pb_patch_avb2">AVB2.0 пропатчен</string>
 		<string name="pb_patch_avb_no">Патчинг AVB2.0 не требуется</string>
-		<string name="pb_tools_info">Информацию об инструментах можно найти на pbrp.ml/docs/tools</string>
 		<string name="pb_coming_soon2">К сожалению, эта функция появится скоро!</string>
 		<string name="pb_theme_1">Вы можете присылать свои кастомные темы</string>
 		<string name="pb_theme_2">нам в</string>
