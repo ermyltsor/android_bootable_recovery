@@ -110,8 +110,6 @@
 		<string name="wipe_cache_dalvik_complete">A cache de &amp; Dalvik foi apagada</string>
 		<string name="swipe_wipe">        Deslize para apagar</string>
 		<string name="swipe_wipe_s">   Apagar</string>
-		<string name="no_os1">Nenhum SO instalado! Tem a</string>
-		<string name="no_osrb">certeza que pretende reiniciar?</string>
 		<string name="no_ospo">certeza que pretende desligar?</string>
 		<string name="rebooting">A reiniciar...</string>
 		<string name="swipe_reboot">     Deslize para reiniciar</string>

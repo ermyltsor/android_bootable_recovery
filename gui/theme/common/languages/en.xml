@@ -118,8 +118,6 @@
 		<string name="wipe_dalvik_complete">Dalvik Wipe Complete</string>
 		<string name="swipe_wipe">Swipe to Wipe</string>
 		<string name="swipe_wipe_s">   Wipe</string>
-		<string name="no_os1">No OS Installed! Are you</string>
-		<string name="no_osrb">sure you wish to reboot?</string>
 		<string name="no_ospo">sure you wish to power off?</string>
 		<string name="rebooting">Rebooting...</string>
 		<string name="swipe_reboot">Swipe to Reboot</string>

@@ -116,8 +116,6 @@
 		<string name="wipe_dalvik_complete">Очистка Dalvik завершена</string>
 		<string name="swipe_wipe">Свайп для очистки</string>
 		<string name="swipe_wipe_s">   Очистка</string>
-		<string name="no_os1">Система не установлена! Вы уверены,</string>
-		<string name="no_osrb">что хотите перезагрузить?</string>
 		<string name="no_ospo">что хотите выключить?</string>
 		<string name="rebooting">Перезагрузка...</string>
 		<string name="swipe_reboot">Свайп для перезагрузки</string>

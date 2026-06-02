@@ -101,8 +101,6 @@
 		<string name="wipe_cache_dalvik_complete">Čiščenje predpomnilnika in Dalvika končano</string>
 		<string name="swipe_wipe">Povlecite za čiščenje</string>
 		<string name="swipe_wipe_s">   Počisti</string>
-		<string name="no_os1">OS-a ni nameščenega! Ali res</string>
-		<string name="no_osrb">želite ponovno zagnati?</string>
 		<string name="no_ospo">želite izklopiti?</string>
 		<string name="rebooting">Ponovno zaganjanje …</string>
 		<string name="swipe_reboot">Povlecite za ponovni zagon</string>

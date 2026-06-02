@@ -100,8 +100,6 @@
         <string name="wipe_cache_dalvik_complete">Η Εκκαθάριση Cache &amp; Dalvik ολοκληρώθηκε</string>
         <string name="swipe_wipe">Σύρετε για εκκαθάριση</string>
         <string name="swipe_wipe_s">   Εκαθάριση</string>
-        <string name="no_os1">Κανένα λειτουργικό σύστημα εγκατεστημένο! Είστε</string>
-        <string name="no_osrb">σίγουροι ότι θέλετε να κάνετε επανεκκίνηση;</string>
         <string name="no_ospo">σίγουροι ότι θέλετε να κάνετε απενεργοποίηση;</string>
         <string name="rebooting">Επανεκκίνηση...</string>
         <string name="swipe_reboot">Σύρετε για Επανεκκίνηση</string>

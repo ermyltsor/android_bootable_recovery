@@ -113,8 +113,6 @@
 		<string name="wipe_dalvik_complete">Dalvik gewist</string>
 		<string name="swipe_wipe">Veeg om te wissen</string>
 		<string name="swipe_wipe_s">   Wissen</string>
-		<string name="no_os1">Geen besturingssysteem geïnstalleerd! Weet u</string>
-		<string name="no_osrb">zeker dat u wilt herstarten?</string>
 		<string name="no_ospo">zeker dat u uw apparaat wilt uitschakelen?</string>
 		<string name="rebooting">Herstarten...</string>
 		<string name="swipe_reboot">Veeg om te herstarten</string>

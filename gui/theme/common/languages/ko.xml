@@ -140,8 +140,6 @@
 		<string name="wipe_dalvik_complete">Dalvik 초기화 완료</string>
 		<string name="swipe_wipe">밀어서 초기화</string>
 		<string name="swipe_wipe_s">   초기화</string>
-		<string name="no_os1">설치된 OS가 없습니다! 그래도</string>
-		<string name="no_osrb">정말 재부팅하시겠습니까?</string>
 		<string name="no_ospo">정말 전원을 끄시겠습니까?</string>
 		<string name="rebooting">재부팅 중...</string>
 		<string name="swipe_reboot">밀어서 재부팅</string>

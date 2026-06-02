@@ -109,8 +109,6 @@
 		<string name="wipe_cache_dalvik_complete">Pulizia Cache &amp; Dalvik completata</string>
 		<string name="swipe_wipe">Scorri per pulire</string>
 		<string name="swipe_wipe_s">   Pulisci</string>
-		<string name="no_os1">Nessun SO installato. Sei</string>
-		<string name="no_osrb">certo di voler riavviare?</string>
 		<string name="no_ospo">certo di voler spegnere?</string>
 		<string name="rebooting">Riavvio...</string>
 		<string name="swipe_reboot">Scorri per riavviare</string>

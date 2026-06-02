@@ -113,8 +113,6 @@
 		<string name="wipe_dalvik_complete">Czyszczenie Dalvik zakończone</string>
 		<string name="swipe_wipe">Przesuń, aby wyczyścić</string>
 		<string name="swipe_wipe_s">   Wyczyść</string>
-		<string name="no_os1">Brak zainstalowanego systemu! Jesteś</string>
-		<string name="no_osrb">pewien, że chcesz uruchomić urządzenie?</string>
 		<string name="no_ospo">pewien, że chcesz wyłączyć?</string>
 		<string name="rebooting">Restartowanie...</string>
 		<string name="swipe_reboot">Przesuń, aby zrestartować</string>

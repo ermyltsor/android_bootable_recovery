@@ -110,8 +110,6 @@
 		<string name="wipe_cache_dalvik_complete">Önbellek ve Dalvik temizliği tamamlandı</string>
 		<string name="swipe_wipe">Temizlemek için Kaydır</string>
 		<string name="swipe_wipe_s">   Temizle</string>
-		<string name="no_os1">İşletim Sistemi yüklü değil!</string>
-		<string name="no_osrb">Yeniden başlatmak istediğinize emin misiniz?</string>
 		<string name="no_ospo">Kapatmak istediğinize emin misiniz?</string>
 		<string name="rebooting">Yeniden Başlatılıyor...</string>
 		<string name="swipe_reboot">Yeniden Başlatmak için Kaydır</string>

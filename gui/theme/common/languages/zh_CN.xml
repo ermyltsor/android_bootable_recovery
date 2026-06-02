@@ -144,8 +144,6 @@
 		<string name="wipe_dalvik_complete">Dalvik 清除完成</string>
 		<string name="swipe_wipe">滑动以清除</string>
 		<string name="swipe_wipe_s">   清除</string>
-		<string name="no_os1">未安装系统！您确定</string>
-		<string name="no_osrb">想要重启吗？</string>
 		<string name="no_ospo">想要关机吗？</string>
 		<string name="rebooting">正在重启...</string>
 		<string name="swipe_reboot">滑动以重启</string>

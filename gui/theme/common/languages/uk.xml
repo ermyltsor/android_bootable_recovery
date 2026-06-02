@@ -104,8 +104,6 @@
 		<string name="wipe_cache_dalvik_complete">Очищення Cache &amp; Dalvik завершено</string>
 		<string name="swipe_wipe">Очистити</string>
 		<string name="swipe_wipe_s">   Очистка</string>
-		<string name="no_os1">Система не встановлена! Ви впевнені,</string>
-		<string name="no_osrb">що хочете перезавантажити?</string>
 		<string name="no_ospo">що хочете вимкнути?</string>
 		<string name="rebooting">Перезавантаження...</string>
 		<string name="swipe_reboot">Перезавантажити</string>

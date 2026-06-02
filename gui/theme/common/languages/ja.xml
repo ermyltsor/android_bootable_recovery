@@ -145,8 +145,6 @@
 		<string name="swipe_wipe">スワイプしてワイプ</string>
 		<string name="swipe_wipe_s">   ワイプ</string>
 		<string name="no_andsec">Android Secure パーティションが見つかりません。</string>
-		<string name="no_os1">OS がインストールされていません！ 本当に</string>
-		<string name="no_osrb">再起動しますか？</string>
 		<string name="no_ospo">電源を切りますか？</string>
 		<string name="rebooting">再起動中...</string>
 		<string name="swipe_reboot">スワイプして再起動</string>

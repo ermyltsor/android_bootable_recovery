@@ -103,8 +103,6 @@
 		<string name="wipe_cache_dalvik_complete">Caché &amp; dalvik limpiados</string>
 		<string name="swipe_wipe">Desliza para limpiar</string>
 		<string name="swipe_wipe_s">   Limpiar</string>
-		<string name="no_os1">¡No hay sistema operativo instalado!</string>
-		<string name="no_osrb">¿Estás seguro de que quieres reiniciar?</string>
 		<string name="no_ospo">¿Estás seguro de que quieres apagar?</string>
 		<string name="rebooting">Reiniciando…</string>
 		<string name="swipe_reboot">Desliza para reiniciar</string>

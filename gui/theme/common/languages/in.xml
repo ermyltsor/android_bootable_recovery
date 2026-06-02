@@ -108,8 +108,6 @@
 		<string name="wipe_cache_dalvik_complete">Pembersihan Cache &amp; Dalvik Selesai</string>
 		<string name="swipe_wipe">Geser untuk Bersihkan</string>
 		<string name="swipe_wipe_s">   Bersihkan</string>
-		<string name="no_os1">Tidak ada OS terpasang! Apakah Anda</string>
-		<string name="no_osrb">yakin untuk melanjutkan muat ulang?</string>
 		<string name="no_ospo">yakin untuk melanjutkan mematikan perangkat?</string>
 		<string name="rebooting">Muat Ulang...</string>
 		<string name="swipe_reboot">Geser untuk Muat Ulang</string>

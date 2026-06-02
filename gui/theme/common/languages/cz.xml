@@ -101,8 +101,6 @@
 		<string name="wipe_cache_dalvik_complete">Vymazání cache &amp; dalvik dokončeno</string>
 		<string name="swipe_wipe">Potáhnout pro vymazání</string>
 		<string name="swipe_wipe_s">   Vymazání</string>
-		<string name="no_os1">Není nainstalovaný OS! Jste si</string>
-		<string name="no_osrb">si jistý, že chcete restart?</string>
 		<string name="no_ospo">si jistý, že chcete vypnout zařízení?</string>
 		<string name="rebooting">Restartování...</string>
 		<string name="swipe_reboot">Potáhnout pro restart</string>

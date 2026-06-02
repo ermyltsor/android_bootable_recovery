@@ -109,8 +109,6 @@
 		<string name="wipe_cache_dalvik_complete">Gyorsítótár &amp; Dalvik törlése kész</string>
 		<string name="swipe_wipe">Csúsztasson a törléshez</string>
 		<string name="swipe_wipe_s">   Törlés</string>
-		<string name="no_os1">Nincs telepített operációs rendszer!</string>
-		<string name="no_osrb">Biztosan újra kívánja indítani?</string>
 		<string name="no_ospo">Biztosan ki szeretné kapcsolni?</string>
 		<string name="rebooting">Újraindítás...</string>
 		<string name="swipe_reboot">Csúsztasson az újraindításhoz</string>

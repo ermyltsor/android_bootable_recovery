@@ -109,8 +109,6 @@
 		<string name="wipe_cache_dalvik_complete">Cache &amp; Dalvik gelöscht</string>
 		<string name="swipe_wipe">Löschen bestätigen</string>
 		<string name="swipe_wipe_s">Löschen</string>
-		<string name="no_os1">Kein OS installiert! Sind Sie</string>
-		<string name="no_osrb">sicher, dass Sie neu starten möchten?</string>
 		<string name="no_ospo">sicher, dass Sie ausschalten möchten?</string>
 		<string name="rebooting">Neustart...</string>
 		<string name="swipe_reboot">Neustart bestätigen</string>

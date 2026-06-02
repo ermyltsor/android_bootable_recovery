@@ -98,8 +98,6 @@
         <string name="wipe_cache_dalvik_complete">Cache &amp; Dalvik Effacés</string>
         <string name="swipe_wipe">Glisser pour formater</string>
         <string name="swipe_wipe_s">Formater</string>
-        <string name="no_os1">Aucun système d'exploitation installé ! Êtes-vous</string>
-        <string name="no_osrb">certain de vouloir redémarrer ?</string>
         <string name="no_ospo">certain de vouloir arrêter le système ?</string>
         <string name="rebooting">En cours de redémarrage...</string>
         <string name="swipe_reboot_s">Redémarrer</string>
