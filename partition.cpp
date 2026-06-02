@@ -2612,8 +2612,8 @@ bool TWPartition::Wipe_F2FS() {
 	if(needs_casefold)
 		f2fs_command += " -O casefold -C utf8";
 
-	if(Is_Compressed)
-		f2fs_command += " -O compression,extra_attr";
+	//if(Is_Compressed)
+	//	f2fs_command += " -O compression,extra_attr";
 
 	f2fs_command += " " + Actual_Block_Device + " " + dev_sz_str;
 
