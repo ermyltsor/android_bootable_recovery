@@ -858,7 +858,7 @@
 		<string name="special">特殊</string>
 		<string name="special_hdr">特殊</string>
 		<string name="about_pbrp">關於 PBRP</string>
-		<string name="device_info">裝置資訊</string>
+		<string name="device_info">          裝置資訊</string>
 		<string name="device_maintainer">裝置維護者</string>
 		<string name="thanksto">致謝</string>
 		<string name="toolscr">工具製作者名單</string>
@@ -871,7 +871,7 @@
 		<string name="build_date">構建日期: %pb_build%</string>
 		<string name="pb_version">PitchBlack 版本: %pb_ver%</string>
 		<string name="device_maintainer1">裝置維護者: %pb_maintainer%</string>
-		<string name="core_contributors">核心貢獻者</string>
+		<string name="core_contributors">        核心貢獻者</string>
 		<string name="miscellaneous">雜項</string>
 		
 		<!--Extras -->
@@ -981,7 +981,7 @@
 		<string name="pb_theme_2">我們的官方管道</string>
 		<string name="pb_device_ab">A/B 分區裝置設定</string>
 		<string name="pb_ota_instruction">請檢查有關 OTA 更新的說明，見於</string>
-		<string name="pb_thanks">感謝您使用 PitchBlack Recovery..!</string>
+		<string name="pb_thanks">             感謝您使用 PitchBlack Recovery..!</string>
 		<string name="pb_donate">如果您喜歡，可以考慮贊助支持我們</string>
 		<string name="pb_coming_soon">敬請期待....!</string>
 		<string name="restore_system_context">無法獲取 {1} 的預設內容資訊 -- Android 可能無法啟動。</string>
