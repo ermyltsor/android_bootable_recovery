@@ -429,7 +429,7 @@
 			</text>
 			<text>
 				<font resource="font_sub_header" color="%sub_header_color%"/>
-				<condition var1="pb_info" var2="OFFICIAL"/>
+				<condition var1="pb_info"/>
 				<placement x="180" y="%row13a_y%"/>
 				<text>{@device_maintainer1=Device Maintainer}</text>
 			</text>
