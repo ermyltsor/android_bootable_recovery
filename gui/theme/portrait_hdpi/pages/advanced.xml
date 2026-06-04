@@ -42,6 +42,16 @@
 
 			<listbox style="group_list">
 				<placement x="0" y="%row5_1_y%" w="%screen_w%" h="%adv_additions_h%"/>
+				<listitem name="{@disable_avb2}">
+					<icon res="mobile_wrench"/>
+					<action function="set">tw_back=advanced</action>
+					<action function="set">tw_action=disableAVB2</action>
+					<action function="set">tw_text1={@disable_avb2_confirm}</action>
+					<action function="set">tw_action_text1={@disabling_AVB2}</action>
+					<action function="set">tw_complete_text1={@disabling_AVB2_complete}</action>
+					<action function="set">tw_slider_text={@swipe_to_confirm}</action>
+					<action function="page">confirm_action</action>
+				</listitem>
 				<listitem name="{@reflash_twrp}">
 					<icon res="wrench"/>
 					<condition var1="fox_branch" op="&gt;=" var2="11"/>
