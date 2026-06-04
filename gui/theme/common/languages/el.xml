@@ -974,7 +974,6 @@
 		<string name="fox_ota_msg_ready">Είστε έτοιμοι να λάβετε ενημερώσεις!</string>
 		<string name="fox_ota_msg_custom">Ενεργή λειτουργία custom ROM</string>
 		<string name="fox_ota_msg_reflash">Παρακαλώ κάντε εγκατάσταση πλήρους ROM!</string>
-		<string name="fox_advanced_stock_recovery">Επιθετική απενερ. αρχικού recovery</string>
 		<string name="fox_support_miui_ota_chk">Υποστήριξη OTA</string>
 		<string name="fox_include_system_survival_chk">Συμπερίληψη Σύστημα σε OTA survival</string>
 		<string name="fox_verify_incremental_ota_signature_chk">Πακέτα OTA επιβεβ. υπογραφής</string>

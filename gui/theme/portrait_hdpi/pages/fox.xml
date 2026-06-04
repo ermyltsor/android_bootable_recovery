@@ -158,9 +158,6 @@
 				<listitem name="{@fox_forced_encryption_chk}">
 					<data variable="fox_reboot_forced_encryption_check"/>
 				</listitem>
-				<listitem name="{@fox_advanced_stock_recovery}">
-					<data variable="fox_reboot_advanced_stock_recovery_check"/>
-				</listitem>
 			</listbox>
 
 			<template name="gestures"/>
@@ -209,9 +206,6 @@
 				<listitem name="{@fox_forced_encryption_chk}">
 					<data variable="fox_reboot_forced_encryption_check"/>
 				</listitem>
-				<listitem name="{@fox_advanced_stock_recovery}">
-					<data variable="fox_reboot_advanced_stock_recovery_check"/>
-				</listitem>
 			</listbox>
 
 			<template name="gestures"/>
@@ -245,9 +239,6 @@
 				</listitem>
 				<listitem name="Repack OrangeFox">
 					<action function="wlfx"/>
-				</listitem>
-				<listitem name="Disable recovery replace">
-					<action function="disable_replace"/>
 				</listitem>
 				<listitem name="OTA deactivation">
 					<action function="calldeactivateprocess"/>

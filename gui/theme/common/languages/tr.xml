@@ -974,7 +974,6 @@
 		<string name="fox_ota_msg_ready">Güncellemeleri almaya hazırsınız!</string>
 		<string name="fox_ota_msg_custom">Özel ROM modu etkin</string>
 		<string name="fox_ota_msg_reflash">Lütfen eksiksiz bir ROM yükleyin!</string>
-		<string name="fox_advanced_stock_recovery">Agresif stok kurtarma devre dışı</string>
 		<string name="fox_support_miui_ota_chk">OTA Desteği</string>
 		<string name="fox_include_system_survival_chk">OTA sağkalımına sistemi dahil et</string>
 		<string name="fox_verify_incremental_ota_signature_chk">Artımlı OTA imza doğrulaması</string>

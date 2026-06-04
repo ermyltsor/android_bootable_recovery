@@ -446,7 +446,6 @@ protected:
 	int wlfx(std::string arg);
 	int wlfw(std::string arg);
 	int calldeactivateprocess(std::string arg);
-	int disable_replace(std::string arg);
 	int repackimage(std::string arg);
 	int reflashtwrp(std::string arg);
 	int fixabrecoverybootloop(std::string arg);

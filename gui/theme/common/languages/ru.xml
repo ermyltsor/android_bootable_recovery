@@ -1061,7 +1061,6 @@
 		<string name="fox_ota_msg_ready">Вы готовы получать обновления!</string>
 		<string name="fox_ota_msg_custom">Режим кастомной прошивки</string>
 		<string name="fox_ota_msg_reflash">Прошейте полный MIUI ROM!</string>
-		<string name="fox_advanced_stock_recovery">Отключить перезапись рекавери</string>
 		<string name="fox_include_system_survival_chk">Включить System в OTA Survival</string>
 		<string name="fox_include_super_survival_chk">Включить Super в OTA Survival</string>
 		<string name="fox_verify_incremental_ota_signature_chk">Проверка подписи MIUI OTA</string>

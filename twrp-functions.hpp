@@ -150,8 +150,6 @@ public:
 	static std::string to_string(unsigned long value); //convert ul to string
 	static void SetPerformanceMode(bool mode); // support recovery.perf.mode
 	static std::string Get_Balanced_Governor(void);	// Get the supported "balanced" CPU governor (schedutil, interactive, or ondemand)
-	static void Disable_Stock_Recovery_Replace(); // Disable stock ROMs from replacing OrangeFox with stock recovery
-	static void Disable_Stock_Recovery_Replace_Func(); // Disable stock ROMs from replacing OrangeFox with stock recovery (/system must be already mounted)	
 	static unsigned long long IOCTL_Get_Block_Size(const char* block_device);
 	static void copy_kernel_log(string curr_storage); // Copy Kernel Log to Current Storage (PSTORE/KMSG)
 	static void copy_logcat(string curr_storage); // Copy Logcat to Current Storage

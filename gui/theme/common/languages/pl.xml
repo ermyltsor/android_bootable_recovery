@@ -974,7 +974,6 @@
 		<string name="fox_ota_msg_ready">Jesteś gotowy do otrzymywania aktualizacji!</string>
 		<string name="fox_ota_msg_custom">Włączony tryb Custom ROM</string>
 		<string name="fox_ota_msg_reflash">Please flash full ROM!</string>
-		<string name="fox_advanced_stock_recovery">Agresywna deaktywacja stock recovery</string>
 		<string name="fox_support_miui_ota_chk">Support OTA</string>
 		<string name="fox_include_system_survival_chk">Umieść system w OTA survival</string>
 		<string name="fox_verify_incremental_ota_signature_chk">Weryf. podpisu przyrostowej aktualizacji OTA</string>

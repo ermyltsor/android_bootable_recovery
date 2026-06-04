@@ -360,11 +360,6 @@ static void process_recovery_mode(twrpAdbBuFifo* adb_bu_fifo, bool skip_decrypti
 #ifndef OF_DEVICE_WITHOUT_PERSIST
 	DataManager::RestorePasswordBackup();
 #endif
-
-#ifndef TW_OEM_BUILD
-	// Disable flashing of stock recovery
-	TWFunc::Disable_Stock_Recovery_Replace();
-#endif
 }
 
 static void reboot() {

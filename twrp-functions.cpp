@@ -2149,192 +2149,6 @@ std::string TWFunc::to_string(unsigned long value)
   return os.str();
 }
 
-void TWFunc::Disable_Stock_Recovery_Replace_Func(void)
-{
-     if (DataManager::GetIntValue(FOX_DONT_REPLACE_STOCK) == 1)
-      	return;
-
-     usleep(128);
-     if ((DataManager::GetIntValue(FOX_ADVANCED_STOCK_REPLACE) == 1) 
-      ||  (Fox_Force_Deactivate_Process == 1))
-	{
-      	  bool we_mounted = false;
-      	  bool we_mounted_sys = false;
-      	  string thedir = "/system";
-          string rootdir = PartitionManager.Get_Android_Root_Path();
-
-      	// system-as-root stuff
-      	  bool Is_SysRoot = Has_System_Root();
-      	  if (Is_SysRoot)
-            {
-	       if (TWFunc::Path_Exists(rootdir + "/system") && TWFunc::Path_Exists(rootdir + "/system/etc"))
-	         {
-                     rootdir = rootdir + "/system";
-                 }
-               else
-              	 {
-            	   if (!PartitionManager.Is_Mounted_By_Path("/system"))
-             	      {
-                	if (PartitionManager.Mount_By_Path("/system", false))
-                	   {
-                              we_mounted_sys = true;
-                   	   }
-             	      }
-            	   if ((PartitionManager.Is_Mounted_By_Path("/system")) && (TWFunc::Path_Exists("/system/system")))
-            	     {
-                	rootdir = "/system/system";
-                     }
-              	 }
-            }
-          else // it is not system-as-root
-            {
-              if (rootdir != "/system")
-                {
-	           if (rootdir != "/")
-	              rootdir = rootdir + "/";
-	       
-	           if (!PartitionManager.Is_Mounted_By_Path(rootdir + "system"))
-	              {
-	           	if (PartitionManager.Mount_By_Path(rootdir + "system", false))
-	              	   {
-	                	we_mounted_sys = true;
-	                	thedir = rootdir + "system";
-	                   }
-	              }
-
-	       	   if (TWFunc::Path_Exists(rootdir + "system") && TWFunc::Path_Exists(rootdir + "system/etc"))
-	              {
-                          rootdir = rootdir + "system";
-                      }
-                }
-            }
-     	// system-as-root stuff //
-
-          LOGINFO("OrangeFox: Disabling stock recovery [search-dir=%s]...\n", rootdir.c_str());
-
-	// using rootdir/ as determined here
-	  usleep(512);
-	  if (TWFunc::Path_Exists(rootdir))
-	    {
-          	LOGINFO("OrangeFox: checking %s ...\n", rootdir.c_str());
-	  	if (Path_Exists(rootdir + "/bin/install-recovery.sh"))
-	      		Rename_File(rootdir + "/bin/install-recovery.sh",
-		     	  	rootdir + "/bin/wlfx0install-recoverybak0xwlf");
-
-	  	if (Path_Exists(rootdir + "/etc/install-recovery.sh"))
-	      		Rename_File(rootdir + "/etc/install-recovery.sh",
-		   	 	rootdir + "/etc/wlfx0install-recoverybak0xwlf");
-
-	  	if (Path_Exists(rootdir + "/etc/recovery-resource.dat"))
-	      		Rename_File(rootdir + "/etc/recovery-resource.dat",
-		   	  	rootdir + "/etc/wlfx0recovery-resource0xwlf");
-
-          	if (Path_Exists(rootdir + "/recovery-from-boot.p"))
-  	     	   {
-	         	Rename_File(rootdir + "/recovery-from-boot.p",
-		      	     rootdir + "/wlfx0recovery-from-boot.bak0xwlf");
-	          	sync();
-	     	   }
-	     }
-
-	// using hardcoded /system/vendor/
-	  we_mounted = false;
-	  
-	  if (!Is_SymLink("/system") && !PartitionManager.Is_Mounted_By_Path("/system"))
-             {
-               if (PartitionManager.Mount_By_Path("/system", false))
-                 {
-                    we_mounted = true;
-                 }
-             }
-
-	  if (!Is_SymLink("/system") && PartitionManager.Is_Mounted_By_Path("/system"))
-	     {
-          	LOGINFO("OrangeFox: checking /system ...\n");
-	  	if (Path_Exists("/system/vendor/bin/install-recovery.sh"))
-	    		rename("/system/vendor/bin/install-recovery.sh",
-		   		"/system/vendor/bin/wlfx0install-recoverybak0xwlf");
-
-	  	if (Path_Exists("/system/vendor/etc/install-recovery.sh"))
-	    		rename("/system/vendor/etc/install-recovery.sh",
-		   		"/system/vendor/etc/wlfx0install-recoverybak0xwlf");
-
-	  	if (Path_Exists("/system/vendor/etc/recovery-resource.dat"))
-	    		rename("/system/vendor/etc/recovery-resource.dat",
-		   		"/system/vendor/etc/wlfx0recovery-resource0xwlf");
-
-          	if (Path_Exists("/system/vendor/recovery-from-boot.p"))
-  	     	   {
-	         	Rename_File("/system/vendor/recovery-from-boot.p",
-		      	     "/system/vendor/wlfx0recovery-from-boot.bak0xwlf");
-	     	   }
-
-	  	usleep(512);	  	
-	  	if (we_mounted) // cleanup
-	     	    PartitionManager.UnMount_By_Path("/system", false);
-	     }
-
-	  usleep(512);
-	  if (we_mounted_sys) // cleanup
-	    {
-	       if (PartitionManager.Is_Mounted_By_Path(thedir))
-	          PartitionManager.UnMount_By_Path(thedir, false);
-	    }
-
-	// using hardcoded /vendor/
-	  usleep(512);
-	  we_mounted = false;
-	  if (!PartitionManager.Is_Mounted_By_Path("/vendor"))
-             {
-               if (PartitionManager.Mount_By_Path("/vendor", false))
-                 {
-                    we_mounted = true;
-                 }
-             }
-
-	  if (PartitionManager.Is_Mounted_By_Path("/vendor"))
-	     {
-          	LOGINFO("OrangeFox: checking /vendor ...\n");
-	  	if (Path_Exists("/vendor/bin/install-recovery.sh"))
-	    		rename("/vendor/bin/install-recovery.sh",
-		   	"/vendor/bin/wlfx0install-recoverybak0xwlf");
-
-	  	if (Path_Exists("/vendor/etc/install-recovery.sh"))
-	    		rename("/vendor/etc/install-recovery.sh",
-		   	"/vendor/etc/wlfx0install-recoverybak0xwlf");
-
-	  	if (Path_Exists("/vendor/etc/recovery-resource.dat"))
-	    		rename("/vendor/etc/recovery-resource.dat",
-		   	"/vendor/etc/wlfx0recovery-resource0xwlf");
-
-          	if (Path_Exists("/vendor/recovery-from-boot.p"))
-  	     	   {
-	         	Rename_File("/vendor/recovery-from-boot.p",
-		      	     "/vendor/wlfx0recovery-from-boot.bak0xwlf");
-	     	   }
-	  	
-	  	usleep(512);
-	  	if (we_mounted) // cleanup
-	     	    PartitionManager.UnMount_By_Path("/vendor", false);
-	     }
-      usleep(64);
-      sync();
-      }
-}
-
-// Disable flashing of stock recovery
-void TWFunc::Disable_Stock_Recovery_Replace(void)
-{
-  #ifdef FOX_VANILLA_BUILD
-  return;
-  #endif
-  if (PartitionManager.Mount_By_Path(PartitionManager.Get_Android_Root_Path(), false))
-     { 
-         Disable_Stock_Recovery_Replace_Func();           
-         PartitionManager.UnMount_By_Path(PartitionManager.Get_Android_Root_Path(), false);
-     }
-}
-
 unsigned long long TWFunc::IOCTL_Get_Block_Size(const char *block_device)
 {
   unsigned long block_device_size;
@@ -4420,9 +4234,6 @@ void TWFunc::Deactivation_Process(void)
      {
          PrepareToFinish();
      }
-   
-  // advanced stock replace
-  Disable_Stock_Recovery_Replace();
 
 // patch ROM's fstab
   
@@ -4479,11 +4290,6 @@ void TWFunc::Patch_AVB20(bool silent)
 std::string zipname = FFiles_dir + "/OF_avb20/OF_avb20.zip";
 int res=0, wipe_cache=0;
 std::string magiskboot = TWFunc::Get_MagiskBoot();
-
-  if (DataManager::GetIntValue(FOX_ADVANCED_STOCK_REPLACE) != 1) {
-        gui_print("- NOTE: you have disabled the stock recovery deactivation feature.\n- Your ROM's recovery will now probably overwrite OrangeFox!\n");
-  	return;
-  }
 
   if (!TWFunc::Path_Exists(magiskboot))
      {
@@ -4630,9 +4436,6 @@ string s = Fox_Bin_Dir + "/magiskboot";
 void TWFunc::Setup_Verity_Forced_Encryption(void) {
   DataManager::SetValue(FOX_DISABLE_DM_VERITY, "0");
   DataManager::SetValue(FOX_DISABLE_FORCED_ENCRYPTION, "0");
-  #ifdef FOX_VANILLA_BUILD
-  DataManager::SetValue(FOX_ADVANCED_STOCK_REPLACE, "0");
-  #endif
 }
 
 void TWFunc::Dump_Current_Settings(void)

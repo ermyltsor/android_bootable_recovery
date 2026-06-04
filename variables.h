@@ -143,7 +143,6 @@ static int Fox_Current_ROM_IsMIUI = 0; // is the currently installed ROM a MIUI 
 #define FOX_DISABLE_MOCK_LOCATION       "fox_reboot_disable_mock_location"
 #define FOX_ENABLE_MOCK_LOCATION        "fox_reboot_enable_mock_location"
 #define FOX_DISABLE_SECURE_BOOT         "fox_reboot_disable_secure_boot"
-#define FOX_ADVANCED_STOCK_REPLACE      "fox_reboot_advanced_stock_recovery_check"
 #define FOX_SAVE_LOAD_AROMAFM           "fox_reboot_saveload_aromafm_check"
 #define FOX_DISABLE_DEBUGGING           "fox_reboot_disable_debugging_check"
 #define FOX_ENABLE_DEBUGGING           	"fox_reboot_forced_debugging_check"

@@ -1194,11 +1194,6 @@ void DataManager::SetDefaultValues()
   string fEncrypt_switch = "0";
   mPersist.SetValue(FOX_DISABLE_FORCED_ENCRYPTION, fEncrypt_switch);
   mPersist.SetValue(FOX_DISABLE_DM_VERITY, dm_verity_switch);
-  #ifdef FOX_VANILLA_BUILD
-  mPersist.SetValue(FOX_ADVANCED_STOCK_REPLACE, "0");
-  #else
-  mPersist.SetValue(FOX_ADVANCED_STOCK_REPLACE, "1");
-  #endif
   //  MIUI }
 
   mPersist.SetValue(FOX_FORCE_DEACTIVATE_PROCESS, "0");
