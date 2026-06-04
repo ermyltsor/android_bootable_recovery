@@ -240,7 +240,7 @@
 		<string name="utcp5">(UTC +5) Yekaterinburg, Islamabad</string>
 		<string name="utcp6">(UTC +6) Almaty, Dhaka, Colombo</string>
 		<string name="utcp7">(UTC +7) Bangkok, Hanoi, Jakarta</string>
-		<string name="utcp8">(UTC +8) Beijing, Singapore, Hong Kong</string>
+		<string name="utcp8">(UTC +8) Beijing, Taipei, Hong Kong, Singapore</string>
 		<string name="utcp9">(UTC +9) Tokyo, Seoul, Yakutsk</string>
 		<string name="utcp10">(UTC +10) Eastern Australia, Guam</string>
 		<string name="utcp11">(UTC +11) Vladivostok, Solomon Islands</string>
@@ -780,7 +780,7 @@
 		<string name="unmount_vendor_install">Unmount Vendor before installing a ZIP</string>
 		<string name="unmount_vendor">Unmounting Vendor...</string>
 		<string name="unmount_vendor_err">Failed to unmount Vendor</string>	
-			
+
 		<string name="fbe_wipe_msg">WARNING: {1} wiped. FBE device should be booted into Android and not Recovery to set initial FBE policy after wipe.</string>		
 		<string name="fastboot_button">Fastboot</string>
 		<string name="enable_adb">Enable ADB</string>

@@ -241,7 +241,7 @@
 		<string name="utcp5" >(UTC+5) Екатеринбург, Уфа, Челябинск</string>
 		<string name="utcp6" >(UTC+6) Омск, Алма-Ата, Бишкек</string>
 		<string name="utcp7" >(UTC+7) Красноярск, Новосибирск, Томск</string>
-		<string name="utcp8" >(UTC+8) Иркутск, Пекин, Гонконг</string>
+		<string name="utcp8" >(UTC+8) Пекин, Тайбэй, Гонконг, Сингапур, Иркутск</string>
 		<string name="utcp9" >(UTC+9) Якутск, Чита, Токио, Сеул</string>
 		<string name="utcp10">(UTC+10) Владивосток, Хабаровск</string>
 		<string name="utcp11">(UTC+11) Магадан, Южно-Сахалинск</string>
