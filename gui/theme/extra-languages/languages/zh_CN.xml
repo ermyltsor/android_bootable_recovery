@@ -805,13 +805,13 @@
 		<string name="keep_storage_data">恢复存储时跳过清除</string>
 		<string name="zip_compatible_err">ZIP Treble 兼容性错误！</string>
 
-		<string name="unmount_sys_install">安装 ZIP 前卸载系统</string>
-		<string name="unmount_system">正在卸载系统...</string>
-		<string name="unmount_system_err">卸载系统失败</string>		
+		<string name="unmount_sys_install">安装 ZIP 前取消挂载 System 分区</string>
+		<string name="unmount_system">正在取消挂载 System 分区...</string>
+		<string name="unmount_system_err">取消挂载 System 分区失败</string>
 
-		<string name="unmount_vendor_install">安装 ZIP 前卸载 Vendor</string>
-		<string name="unmount_vendor">正在卸载 Vendor...</string>
-		<string name="unmount_vendor_err">卸载 Vendor 失败</string>	
+		<string name="unmount_vendor_install">安装 ZIP 前取消挂载 Vendor 分区</string>
+		<string name="unmount_vendor">正在取消挂载 Vendor 分区...</string>
+		<string name="unmount_vendor_err">取消挂载 Vendor 分区失败</string>
 
 		<string name="fbe_wipe_msg">警告：{1} 已清除。FBE 设备应启动到 Android 而非 Recovery，以便在清除后设置初始 FBE 策略。</string>		
 		<string name="fastboot_button">Fastboot</string>
