@@ -76,7 +76,7 @@
 		<variable name="tw_hide_kb" value="0"/>
 		<variable name="screen_width" value="1080"/>
 		<variable name="screen_height" value="1920"/>
-		<variable name="status_height" value="72"/>
+		<variable name="status_height" value="82"/>
 		<variable name="header_height" value="256"/>
 		<variable name="navbar_height" value="130"/>
 		<variable name="content_width" value="1008"/>
@@ -114,10 +114,10 @@
 		<variable name="btn4_col3_x" value="558"/>
 		<variable name="btn4_col4_x" value="819"/>
 		<variable name="status_topalign_header_y" value="4"/>
-		<variable name="status_centeralign_header_y" value="15"/>
+		<variable name="status_centeralign_header_y" value="32"/>
 		<variable name="status_bottomalign_header_y" value="30"/>
 		<variable name="row1_header_y" value="{statusicons_align}"/>
-		<variable name="row2_header_y" value="72"/>
+		<variable name="row2_header_y" value="82"/>
 		<variable name="row3_header_y" value="90"/>
 		<variable name="row4_header_y" value="168"/>
 		<variable name="row1_y" value="256"/>
@@ -173,7 +173,7 @@
 		<variable name="row24_y" value="1728"/>
 		<variable name="row24a_y" value="1760"/>
 		<variable name="row25_y" value="1792"/>
-		<variable name="navbar_y" value="1792"/>
+		<variable name="navbar_y" value="1802"/>
 		<variable name="navbar_btn_y" value="1856"/>
 		<variable name="keyboard_y" value="1149"/>
 		<variable name="keyboard_terminal_y" value="1053"/>
@@ -649,7 +649,7 @@
 		<template name="keyboardtemplate">
 			<keyboard>
 				<condition var1="tw_hide_kb" var2="0"/>
-				<placement x="0" y="%keyboard_y%" w="1080" h="644"/>
+				<placement x="0" y="%keyboard_y%" w="1080" h="656"/>
 				<keymargin x="8" y="8"/>
 				<background color="#111111"/>
 				<key-alphanumeric color="#111111" font="keylabel" textcolor="#EEEEEE"/>
@@ -661,7 +661,7 @@
 				<highlight color="%highlight_color%"/>
 				<capshighlight color="%highlight_color%"/>
 				<layout1>
-					<keysize height="161" width="108"/>
+					<keysize height="164" width="108"/>
 					<row1 key01="q" long01="1" key02="w" long02="2" key03="e" long03="3" key04="r" long04="4" key05="t" long05="5" key06="y" long06="6" key07="u" long07="7" key08="i" long08="8" key09="o" long09="9" key10="p" long10="0"/>
 					<row2 key01="54:" key02="a" long02="@" key03="s" long03="#" key04="d" long04="$" key05="f" long05="%" key06="g" long06="&amp;" key07="h" long07="*" key08="j" long08="-" key09="k" long09="+" key10="l" long10="_" key11="54:"/>
 					<row3 key01="162:layout2" key02="z" long02="!" key03="x" long03="&quot;" key04="c" long04="'" key05="v" long05=":" key06="b" long06=";" key07="n" long07="/" key08="m" long08="?" key09="162:c:8"/>
@@ -670,7 +670,7 @@
 					<keylabel key="0:layout3" text="?123"/>
 				</layout1>
 				<layout2>
-					<keysize height="161" width="108" capslock="0" revert_layout="1"/>
+					<keysize height="164" width="108" capslock="0" revert_layout="1"/>
 					<row1 key01="Q" long01="1" key02="W" long02="2" key03="E" long03="3" key04="R" long04="4" key05="T" long05="5" key06="Y" long06="6" key07="U" long07="7" key08="I" long08="8" key09="O" long09="9" key10="P" long10="0"/>
 					<row2 key01="54:" key02="A" long02="@" key03="S" long03="#" key04="D" long04="$" key05="F" long05="%" key06="G" long06="&amp;" key07="H" long07="*" key08="J" long08="-" key09="K" long09="+" key10="L" long10="_" key11="54:"/>
 					<row3 key01="162:layout1" key02="Z" long02="!" key03="X" long03="&quot;" key04="C" long04="'" key05="V" long05=":" key06="B" long06=";" key07="N" long07="/" key08="M" long08="?" key09="162:c:8"/>
@@ -679,7 +679,7 @@
 					<keylabel key="0:layout3" text="?123"/>
 				</layout2>
 				<layout3>
-					<keysize height="161" width="108"/>
+					<keysize height="164" width="108"/>
 					<row1 key01="1" key02="2" key03="3" key04="4" key05="5" key06="6" key07="7" key08="8" key09="9" key10="0"/>
 					<row2 key01="@" key02="#" key03="$" key04="%" key05="&amp;" key06="*" key07="-" key08="+" key09="(" key10=")"/>
 					<row3 key01="162:layout4" key02="!" key03="108:c:34" key04="'" key05=":" key06=";" key07="/" key08="?" key09="162:c:8"/>
@@ -688,7 +688,7 @@
 					<keylabel key="0:layout4" text="~\{"/>
 				</layout3>
 				<layout4>
-					<keysize height="161" width="108"/>
+					<keysize height="164" width="108"/>
 					<row1 key01="~" key02="`" key03="|" key04="108:" key05="108:" key06="108:" key07="%" key08="108:" key09="{" key10="}"/>
 					<row2 key01="108:" key02="108:" key03="108:" key04="108:" key05="108:" key06="^" key07="_" key08="=" key09="[" key10="]"/>
 					<row3 key01="162:layout3" key02="108:" key03="108:" key04="108:" key05="108:" key06="\" key07="&lt;" key08="&gt;" key09="162:c:8"/>
@@ -702,7 +702,7 @@
 		<template name="keyboardnum">
 			<keyboard>
 				<condition var1="tw_hide_kb" var2="0"/>
-				<placement x="0" y="%keyboard_y%" w="1080" h="644"/>
+				<placement x="0" y="%keyboard_y%" w="1080" h="656"/>
 				<keymargin x="8" y="8"/>
 				<background color="#111111"/>
 				<key-alphanumeric color="#111111" font="keylabel" textcolor="#EEEEEE"/>
@@ -714,7 +714,7 @@
 				<highlight color="%highlight_color%"/>
 				<capshighlight color="%highlight_color%"/>
 				<layout1>
-					<keysize height="160" width="265"/>
+					<keysize height="164" width="265"/>
 					<row1 key01="141:" key02="1" key03="2" key04="3" key05="141:"/>
 					<row2 key01="141:" key02="4" key03="5" key04="6" key05="141:"/>
 					<row3 key01="141:" key02="7" key03="8" key04="9" key05="141:"/>
