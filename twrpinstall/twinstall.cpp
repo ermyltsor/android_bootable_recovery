@@ -312,7 +312,7 @@ int TWinstall_zip(const char* path, int* wipe_cache, bool check_for_digest) {
 		gui_msg("unmount_system=Unmounting System...");
 		if(!PartitionManager.UnMount_By_Path(PartitionManager.Get_Android_Root_Path(), true)) {
 			gui_err("unmount_system_err=Failed unmounting System");
-			return -1;
+			//return -1;
 		}
 		unlink("/system");
 		mkdir("/system", 0755);
