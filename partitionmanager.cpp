@@ -294,11 +294,14 @@ bool TWPartitionManager::Disable_AVB2(bool Display_Info) {
 #ifdef AB_OTA_UPDATER
 	return Do_Disable_AVB2("vbmeta_a", disable_flags, Display_Info)
 			& Do_Disable_AVB2("vbmeta_system_a", disable_flags, Display_Info)
+			& Do_Disable_AVB2("vbmeta_vendor_a", disable_flags, Display_Info)
 			& Do_Disable_AVB2("vbmeta_b", disable_flags, Display_Info)
-			& Do_Disable_AVB2("vbmeta_system_b", disable_flags, Display_Info);
+			& Do_Disable_AVB2("vbmeta_system_b", disable_flags, Display_Info)
+			& Do_Disable_AVB2("vbmeta_vendor_b", disable_flags, Display_Info);
 #else
 	return Do_Disable_AVB2("vbmeta", disable_flags, Display_Info)
-			& Do_Disable_AVB2("vbmeta_system", disable_flags, Display_Info);
+			& Do_Disable_AVB2("vbmeta_system", disable_flags, Display_Info)
+			& Do_Disable_AVB2("vbmeta_vendor", disable_flags, Display_Info);
 #endif
 }
 
