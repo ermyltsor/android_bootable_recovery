@@ -16,6 +16,12 @@
 	along with TWRP.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <android-base/chrono_utils.h>
+#include <android-base/file.h>
+#include <android-base/logging.h>
+#include <android-base/properties.h>
+#include <android-base/strings.h>
+
 #include <pthread.h>
 #include <time.h>
 #include <string>
@@ -39,6 +45,8 @@
 
 #define DEVID_MAX 64
 #define HWID_MAX 32
+
+std::string prjname = android::base::GetProperty("ro.boot.prjname", "");
 
 extern "C"
 {
@@ -256,7 +264,9 @@ int DataManager::LoadValues(const string& filename)
 	mPersist.LoadValues();
 
 #ifndef TW_NO_SCREEN_TIMEOUT
-	blankTimer.setTime(mPersist.GetIntValue("tw_screen_timeout_secs"));
+	if (prjname != "21027") {
+		blankTimer.setTime(mPersist.GetIntValue("tw_screen_timeout_secs"));
+	}
 #endif
 
 	pthread_mutex_unlock(&m_valuesLock);
@@ -433,7 +443,9 @@ int DataManager::SetValue(const string& varName, const string& value, const int 
 
 #ifndef TW_NO_SCREEN_TIMEOUT
 	if (varName == "tw_screen_timeout_secs") {
-		blankTimer.setTime(atoi(value.c_str()));
+		if (prjname != "21027") {
+			blankTimer.setTime(atoi(value.c_str()));
+		}
 	} else
 #endif
 	if (varName == "tw_storage_path") {
@@ -818,12 +830,18 @@ void DataManager::SetDefaultValues()
 #else
 	mConst.SetValue("tw_is_vendor_boot", "0");
 #endif
+#ifndef TW_NO_SCREEN_TIMEOUT
+	if (prjname != "21027") {
+		mPersist.SetValue("tw_screen_timeout_secs", "60");
+		mPersist.SetValue("tw_no_screen_timeout", "0");
+	} else {
+		mConst.SetValue("tw_screen_timeout_secs", "0");
+		mConst.SetValue("tw_no_screen_timeout", "1");
+	}
+#endif
 #ifdef TW_NO_SCREEN_TIMEOUT
 	mConst.SetValue("tw_screen_timeout_secs", "0");
 	mConst.SetValue("tw_no_screen_timeout", "1");
-#else
-	mPersist.SetValue("tw_screen_timeout_secs", "60");
-	mPersist.SetValue("tw_no_screen_timeout", "0");
 #endif
 #ifdef BOARD_BOOT_HEADER_VERSION
 	mConst.SetValue("tw_boot_header_version", BOARD_BOOT_HEADER_VERSION);

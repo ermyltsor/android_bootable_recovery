@@ -16,6 +16,12 @@
         along with TWRP.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <android-base/chrono_utils.h>
+#include <android-base/file.h>
+#include <android-base/logging.h>
+#include <android-base/properties.h>
+#include <android-base/strings.h>
+
 #include <linux/input.h>
 #include <pthread.h>
 #include <stdarg.h>
@@ -109,6 +115,8 @@ class InputHandler
 public:
 	void init()
 	{
+		std::string prjname = android::base::GetProperty("ro.boot.prjname", "");
+
 		// these might be read from DataManager in the future
 		touch_hold_ms = 500;
 		touch_repeat_ms = 100;
@@ -119,16 +127,18 @@ public:
 		state = AS_NO_ACTION;
 		x = y = 0;
 
-#ifndef TW_NO_SCREEN_TIMEOUT
-		{
-			string seconds;
-			DataManager::GetValue("tw_screen_timeout_secs", seconds);
-			blankTimer.setTime(atoi(seconds.c_str()));
-			blankTimer.resetTimerAndUnblank();
+		#ifndef TW_NO_SCREEN_TIMEOUT
+		if (prjname != "21027") {
+			{
+				string seconds;
+				DataManager::GetValue("tw_screen_timeout_secs", seconds);
+				blankTimer.setTime(atoi(seconds.c_str()));
+				blankTimer.resetTimerAndUnblank();
+			}
+		} else {
+			LOGINFO("Skipping screen timeout: TW_NO_SCREEN_TIMEOUT is set\n");
 		}
-#else
-		LOGINFO("Skipping screen timeout: TW_NO_SCREEN_TIMEOUT is set\n");
-#endif
+		#endif
 	}
 
 	// process input events. returns true if any event was received.

@@ -16,6 +16,12 @@
         along with TWRP.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <android-base/chrono_utils.h>
+#include <android-base/file.h>
+#include <android-base/logging.h>
+#include <android-base/properties.h>
+#include <android-base/strings.h>
+
 #include <string>
 #include <pthread.h>
 #include <sys/time.h>
@@ -53,30 +59,34 @@ void blanktimer::setTimer(void) {
 }
 
 void blanktimer::checkForTimeout() {
-#ifndef TW_NO_SCREEN_TIMEOUT
-	pthread_mutex_lock(&mutex);
-	timespec curTime, diff;
-	clock_gettime(CLOCK_MONOTONIC, &curTime);
-	diff = TWFunc::timespec_diff(btimer, curTime);
-	if (sleepTimer > 2 && diff.tv_sec > (sleepTimer - 2) && state == kOn) {
-		orig_brightness = getBrightness();
-		state = kDim;
-		TWFunc::Set_Brightness("5");
+	std::string prjname = android::base::GetProperty("ro.boot.prjname", "");
+
+	#ifndef TW_NO_SCREEN_TIMEOUT
+	if (prjname != "21027") {
+		pthread_mutex_lock(&mutex);
+		timespec curTime, diff;
+		clock_gettime(CLOCK_MONOTONIC, &curTime);
+		diff = TWFunc::timespec_diff(btimer, curTime);
+		if (sleepTimer > 2 && diff.tv_sec > (sleepTimer - 2) && state == kOn) {
+			orig_brightness = getBrightness();
+			state = kDim;
+			TWFunc::Set_Brightness("5");
+		}
+		if (sleepTimer && diff.tv_sec > sleepTimer && state < kOff) {
+			state = kOff;
+			TWFunc::Set_Brightness("0");
+			TWFunc::check_and_run_script("/system/bin/postscreenblank.sh", "blank");
+			PageManager::ChangeOverlay("lock");
+		}
+	#ifndef TW_NO_SCREEN_BLANK
+		if (state == kOff) {
+			gr_fb_blank(true);
+			state = kBlanked;
+		}
+	#endif
+		pthread_mutex_unlock(&mutex);
 	}
-	if (sleepTimer && diff.tv_sec > sleepTimer && state < kOff) {
-		state = kOff;
-		TWFunc::Set_Brightness("0");
-		TWFunc::check_and_run_script("/system/bin/postscreenblank.sh", "blank");
-		PageManager::ChangeOverlay("lock");
-	}
-#ifndef TW_NO_SCREEN_BLANK
-	if (state == kOff) {
-		gr_fb_blank(true);
-		state = kBlanked;
-	}
-#endif
-	pthread_mutex_unlock(&mutex);
-#endif
+	#endif
 }
 
 string blanktimer::getBrightness(void) {
@@ -91,29 +101,32 @@ string blanktimer::getBrightness(void) {
 }
 
 void blanktimer::resetTimerAndUnblank(void) {
-#ifndef TW_NO_SCREEN_TIMEOUT
-	pthread_mutex_lock(&mutex);
-	setTimer();
-	switch (state) {
-		case kBlanked:
-#ifndef TW_NO_SCREEN_BLANK
-			gr_fb_blank(false);
-#endif
-			// TODO: this is asymmetric with postscreenblank.sh - shouldn't it be under the next case label?
-			TWFunc::check_and_run_script("/system/bin/postscreenunblank.sh", "unblank");
-			// No break here, we want to keep going
-		case kOff:
-			gui_forceRender();
-			// No break here, we want to keep going
-		case kDim:
-			if (!orig_brightness.empty())
-				TWFunc::Set_Brightness(orig_brightness);
-			state = kOn;
-		case kOn:
-			break;
+	std::string prjname = android::base::GetProperty("ro.boot.prjname", "");
+	#ifndef TW_NO_SCREEN_TIMEOUT
+	if (prjname != "21027") {
+		pthread_mutex_lock(&mutex);
+		setTimer();
+		switch (state) {
+			case kBlanked:
+	#ifndef TW_NO_SCREEN_BLANK
+				gr_fb_blank(false);
+	#endif
+				// TODO: this is asymmetric with postscreenblank.sh - shouldn't it be under the next case label?
+				TWFunc::check_and_run_script("/system/bin/postscreenunblank.sh", "unblank");
+				// No break here, we want to keep going
+			case kOff:
+				gui_forceRender();
+				// No break here, we want to keep going
+			case kDim:
+				if (!orig_brightness.empty())
+					TWFunc::Set_Brightness(orig_brightness);
+				state = kOn;
+			case kOn:
+				break;
+		}
+		pthread_mutex_unlock(&mutex);
 	}
-	pthread_mutex_unlock(&mutex);
-#endif
+	#endif
 }
 
 void blanktimer::blank(void) {
@@ -123,22 +136,26 @@ void blanktimer::blank(void) {
  *     TW_NO_SCREEN_TIMEOUT and do not blank screen here either
  */
 
-#ifndef TW_NO_SCREEN_TIMEOUT
-	pthread_mutex_lock(&mutex);
-	if (state == kOn) {
-		orig_brightness = getBrightness();
-		state = kOff;
-		TWFunc::Set_Brightness("0");
-		TWFunc::check_and_run_script("/system/bin/postscreenblank.sh", "blank");
+	std::string prjname = android::base::GetProperty("ro.boot.prjname", "");
+
+	#ifndef TW_NO_SCREEN_TIMEOUT
+	if (prjname != "21027") {
+		pthread_mutex_lock(&mutex);
+		if (state == kOn) {
+			orig_brightness = getBrightness();
+			state = kOff;
+			TWFunc::Set_Brightness("0");
+			TWFunc::check_and_run_script("/system/bin/postscreenblank.sh", "blank");
+		}
+	#ifndef TW_NO_SCREEN_BLANK
+		if (state == kOff) {
+			gr_fb_blank(true);
+			state = kBlanked;
+		}
+	#endif
+		pthread_mutex_unlock(&mutex);
 	}
-#ifndef TW_NO_SCREEN_BLANK
-	if (state == kOff) {
-		gr_fb_blank(true);
-		state = kBlanked;
-	}
-#endif
-	pthread_mutex_unlock(&mutex);
-#endif
+	#endif
 }
 
 void blanktimer::toggleBlank(void) {
