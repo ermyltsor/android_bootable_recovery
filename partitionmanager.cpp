@@ -359,10 +359,12 @@ int TWPartitionManager::Process_Fstab(string Fstab_Filename, bool Display_Error,
 	if (Get_Super_Status()) {
 		Setup_Super_Devices();
 	}
-	DataManager::ReadSettingsFile();
-	if (DataManager::GetStrValue("tw_language") != "en") {
+	PartitionManager.Mount_By_Path(TW_PERSIST_DIR, false);
+	if (TWFunc::Path_Exists(string(TW_PERSIST_DIR) + '/' + TW_SETTINGS_FILE)) {
+		DataManager::ReadSettingsFile();
 		PageManager::LoadLanguage(DataManager::GetStrValue("tw_language"));
 	}
+	PartitionManager.UnMount_By_Path(TW_PERSIST_DIR, false);
 	LOGINFO("Done processing fstab files\n");
 
 	if (recovery_mode) {
