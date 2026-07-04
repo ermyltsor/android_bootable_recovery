@@ -739,5 +739,20 @@
 		<string name="rescue_party2"> 2. 格式化 Data 分割區；</string>
 		<string name="rescue_party3"> 3. 重新刷入您的 ROM。</string>
 		<string name="rescue_party4">報告的問題為：</string>
+
+		<string name="install_took_seconds_msg">安裝耗時 {1} 秒。</string>
+		<string name="prevent_auto_install_stock_rec">阻止自動還原原廠 Recovery</string>
+		<string name="prevent_auto_install_stock_rec_success_msg">阻止自動還原原廠 Recovery 成功！</string>
+		<string name="prevented_auto_install_stock_rec_msg">已阻止自動還原原廠 Recovery！</string>
+		<string name="custom_install_confirm">是否安裝 {1}？</string>
+		<string name="custom_installing">正在安裝 {1}...</string>
+		<string name="custom_installing_complete">{1} 安裝完成！</string>
+		<string name="auto_disable_avb2">刷入 ROM 後自動停用 AVB2.0</string>
+		<string name="disable_avb2">停用 AVB2.0</string>
+		<string name="disable_avb2_confirm">是否停用 AVB2.0？</string>
+		<string name="disabling_AVB2">正在停用 AVB2.0...</string>
+		<string name="disabling_AVB2_complete">停用 AVB2.0 完成！</string>
+		<string name="disable_avb2_success_msg">停用 AVB2.0：處理 '{1}' 成功。</string>
+		<string name="disable_avb2_fail_msg">停用 AVB2.0：處理 '{1}' 失敗！</string>
 	</resources>
 </language>
